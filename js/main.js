@@ -1,17 +1,21 @@
 const body = document.querySelector('body');
-const text = document.querySelector('.text');
+const audio = document.querySelector('.audio');
 
-let shadowExtend = 500;
+body.addEventListener('click', (e) => {
+  const buttet = document.createElement('span');
+  buttet.className = 'bullet';
+  let x = e.offsetX;
+  let y = e.offsetY;
+  buttet.style.left = x + 'px';
+  buttet.style.top = y + 'px';
+  body.appendChild(buttet);
 
-let textShadowValue = '';
-for (let i = 1; i <= shadowExtend; i++) {
-  if (i < shadowExtend) {
-    textShadowValue += `${i}px ${i}px 2px #05d65f,`;
-    console.log(textShadowValue);
-  } else {
-    textShadowValue += `${i}px ${i}px 2px #05d65f`;
-    console.log(textShadowValue);
-  }
-}
+  setTimeout(function () {
+    audio.play();
 
-text.style.textShadow = textShadowValue;
+    setTimeout(function () {
+      audio.pause();
+      audio.currentTime = 0;
+    }, 1000);
+  }, 0);
+});

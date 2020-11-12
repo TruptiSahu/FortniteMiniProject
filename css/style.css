@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 *,
 *::after,
@@ -13,15 +13,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #01ff70;
-  /* background: #05d65f; */
+  background: url(../img/bg.jpg) no-repeat center center/cover;
   overflow: hidden;
 }
 
-.text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 100px;
-  font-weight: 700;
-  color: #ffff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+.bullet {
+  background: url(../img/hole.png) no-repeat center center / cover;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform: translate(14px, 14px);
+}
+
+body {
+  cursor: url('../img/aim.png'), url('../img/aim.png'), move;
 }
